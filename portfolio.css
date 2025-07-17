@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: aliceblue;
+    background: #092336;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 20px 10%;
+    background: linear-gradient(#03d5d5, #e407e4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 25px;
+    color: #0f1111;
+    text-shadow: 0 0 10px rgb(28, 30, 31);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* Navbar Links */
+.navbar a {
+    display: inline-block;
+    font-size: 20px;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 10px #0f0e0f;
+}
+.certificate{
+    margin-top: 100px;
+}
+.certificate h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    
+}
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.card {
+    width: 325px;
+    background-color: #092336;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px #03d5d5;
+    margin: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: slideUp 0.8s ease forwards;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #03d5d5, 0 0 25px #e407e4;
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Card Content Padding (if needed in future) */
+.card-content {
+    padding: 16px;
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #092336 ;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #03d5d5;
+    font-weight: bold;
+    margin: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background-color: #e407e4;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.projects{
+    align-items: center;
+    margin-top: 100px;
+}
+.box{
+    width: 93%;
+    height: 150px;
+    box-shadow: 0 0 15px #03d5d5;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    border-radius: 15px;
+}
+.image{
+    width: 140px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #edebed;
+
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    object-fit: cover;
+}
+.projects h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;  
+}
+
+#p1{animation: slideRight 1s ease forwards;}
+#p2{animation: slideRight 2s ease forwards;}
+#p3{animation: slideRight 3s ease forwards;}
+#p4{animation: slideRight 4s ease forwards;}
+
+.projects .title a{
+    font-size: 25px;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+.projects .title p{
+    font-size: 18px;
+    align-items: center;
+    color: rgb(77, 208, 231);
+    padding-top: 10px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.project-title:hover {
+    text-shadow: 0 0 10px #ff00ff;
+    color: #ff00ff;
+}
+/* Wrap footer in a section with full width and no padding/margin */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-width background color applied to footer-container */
+.footer-container {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    font-size: 15px;
+    padding: 50px 5%;
+    box-sizing: border-box;
+}
+
+/* Bottom bar - full width too */
+.footer-bottom {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 15px 10px;
+    width: 100%;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar a {
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+  }
+}
+

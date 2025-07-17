@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    color: aliceblue;
+    background: #093631;
+}
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(#03d5d5, #e407e4);
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color:#0f1111;
+    text-shadow: 0 0 10px rgb(28, 30, 31);
+    text-decoration: none;
+    font-weight: 600;
+    cursor : default;
+    opacity : 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .3s;
+    margin-right: 20px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+}
+.navbar a:hover{
+    text-shadow: 0 0 10px #0f0e0f;
+    text-decoration: bold;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content {
+    max-width: 600px;
+}
+.name{
+    font-family: cursive;
+    font-size: 50px;
+    animation: slideBottom 1s ease forwards;
+}
+.home-content h3 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 3px 0;
+    transition: .3s;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+.home-content h2:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h2 span{
+    color:#f308f3;
+    text-shadow: 0 0 10px violet;
+}
+.home-content p {
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: Arial, serif;
+}
+.home-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color:#00ffff; /* Optional: add a background circle */
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icons a i {
+    font-size: 24px;
+    color: rgb(11, 11, 11); /* icon color */
+}
+
+.icons a:hover {
+    transform: scale(1.2);
+    background-color: #e407e4;
+}
+
+.icons a:hover i {
+    color: white;
+}
+.glow-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 15%; 
+    background: linear-gradient(#00ffff, #ff00ff);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow-circle .gap{
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    object-fit: cover;
+    padding: 8px;
+    background-color: #081b29;
+}
+.glow-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    object-fit: cover;
+    padding: 8px;
+}
+
+.btn-box {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: linear-gradient(#00ffff, #ff00ff);
+    color: #081b29;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px transparent;
+}
+
+.aboutme {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    gap: 40px;
+}
+
+/* Image wrapper */
+.aboutme .home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme .glow-circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 15%;
+    background: linear-gradient(#00ffff, #ff00ff);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme .glow-circle .gap {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    background-color: #081b29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme .glow-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    object-fit: cover;
+    padding: 0;
+}
+
+/* Text Content */
+.aboutme .about {
+    flex: 1;
+}
+
+.aboutme h3 {
+    font-size: 35px;
+    color: #08f3f3;
+    text-shadow: 0 0 10px rgb(130, 216, 238);
+    margin-bottom: 20px;
+    animation: slideRight 1s ease forwards;
+}
+
+.aboutme p {
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    animation: slideRight 1s ease forwards;
+}
+
+.aboutme .btn-box {
+    width: fit-content;
+    padding: 10px 20px;
+    background: linear-gradient(#00ffff, #ff00ff);
+    color: #081b29;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px transparent;
+}
+
+.aboutme .btn-box:hover {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    transform: scale(1.05);
+}
+
+
+
+
+/* General Section Styling */
+section {
+    padding: 80px 10%;
+    background-color: #081b29;
+    color: white;
+    
+}
+
+.skill-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.container1, .container2 {
+    flex: 1 1 45%;
+}
+
+/* Section Title */
+.sub-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #eff5f5;
+    text-shadow: 0 0 10px rgb(130, 216, 238);
+}
+
+
+/* Container */
+.container1 {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+/* Heading for Skill Type */
+.heading1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #e6ecec;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Technical Bars Wrapper */
+.Technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Each Skill Bar */
+.bar {
+    position: relative;
+    width: 100%;
+}
+
+/* Icon + Skill Label */
+.bar i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Info Label */
+.info {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Progress Line Background */
+.progress-line {
+    position: relative;
+    height: 8px;
+    width: 50%;
+    background: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Actual Fill of Progress Bar */
+.progress-line span {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to right, #00ffff, #ff00ff);
+    border-radius: 10px;
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+/* Example Skill Percentages */
+.progress-line.html span { width: 95%; }
+.progress-line.css span { width: 90%; }
+.progress-line.js span { width: 70%; }
+.progress-line.python span { width: 95%; }
+.progress-line.java span { width: 75%; }
+.progress-line.django span { width: 75%; }
+
+/* Animation */
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 'XX%';
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sub-title {
+        font-size: 32px;
+    }
+
+    .heading1 {
+        font-size: 24px;
+    }
+
+    .bar i {
+        font-size: 20px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+}
+
+@keyframes animate {
+    100%{
+        transform : scaleX(1);
+    }
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    }
+    50% {
+        box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+    }
+    100% {
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    }
+}
+
+.btn-box:hover {
+    animation: pulseGlow 1s infinite;
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Container Styling */
+.Professional-bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Outer Circular Border with Conic Gradient Animation */
+.outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --value: 0deg;
+  background-color: #081b29;
+}
+
+.outer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#00ffff var(--value), transparent 0);
+  mask-image: radial-gradient(circle closest-side, transparent 78%, black 79%);
+  -webkit-mask-image: radial-gradient(circle closest-side, transparent 78%, black 79%);
+  z-index: 0;
+}
+
+.inner {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #081b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.num {
+  font-weight: 600;
+  color: #08f3f3;
+  font-size: 20px;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.skill-label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: white;
+}
+.footer-container{
+    padding: 50px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    font-size: 15px;
+}
+.footer-about{
+    color: white;
+    font-family: sans-serif;
+    
+}
+.footer-links{
+    text-decoration: none;
+}
+.footer-bottom{
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar a {
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 1.5rem;
+  }
+
+  section h1,
+  .contact-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-box .btn {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
