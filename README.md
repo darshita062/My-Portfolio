@@ -38,7 +38,7 @@ Want to connect? Simply fill the form and your message reaches me directly via e
 
 1. Users navigate through sections like About, Skills, and Projects.
 2. A responsive navbar adapts to all screen sizes with a mobile menu.
-3. The contact form uses an email-sending API (like EmailJS) to deliver user queries directly to your inbox.
+3. The contact form uses an email-sending API (like Web3forms) to deliver user queries directly to your inbox.
 
 ---
 
